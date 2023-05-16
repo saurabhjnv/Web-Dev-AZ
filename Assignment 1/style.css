@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+.container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.upper-part{
+    background-color: #1F4482;
+    display: flex;
+    flex-direction: row;
+    height: 65vh;
+    justify-content: space-around;
+    border-bottom: 1px solid white;
+}
+
+
+.upper-left{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+    justify-content: center;
+}
+
+.algo{
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+
+    color: #FFFFFF;
+}
+.success{
+    color: #E9EE00;
+}
+.tooltip{
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    color: #FFFFFF;
+}
+
+
+.email-taker{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content:start;
+    margin-top: 10vh;
+}
+
+.email-taker-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.email-taker-left input{
+    box-sizing: border-box;
+    width: 24vw;
+    height: 8vh;
+    background: #FFFFFF;
+    border: 4px solid #FFFFFF;
+    border-radius: 8px;
+    
+}
+.email-taker-left input::placeholder{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 5%;
+    color: #888888;
+}
+.email-taker button{
+    width: 14vw;
+    height: 8vh;
+    background: #282828;
+    border-radius: 1vh;
+    font-family: 'Inter';
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    border-color: #282828;
+    margin-left: 5%;
+}
+.no-spam{
+    font-family: 'Inter';
+    color:#FFFFFF;
+    font-size: 14px;
+}
+
+.lower-part{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35vh;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    color: #FFFFFF;
+    background-color: #282828;
+}
+
+.lower-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-top: 4%;
+    margin-bottom: 4%;
+    margin-left: 13%;
+
+
+}
+.lower-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align-last:right; 
+    margin-top: 4%;
+    margin-bottom: 5%;
+    margin-right: 13%;
+  
+}
+
