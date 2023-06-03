@@ -17,7 +17,7 @@ s = Service("/usr/local/bin/chromedriver")
 driver = webdriver.Chrome(service = s)  # You may need to provide the path to your chromedriver executable
 
 # # The base URL for the pages to scrape
-page_base_url = "https://leetcode.com/problemset/all/?page="  # Replace with your desired URL
+PAGE_BASE_URL = "https://leetcode.com/problemset/all/?page="  # Replace with your desired URL
 
 # Fucntion will get all the links (href) from "a" tag which are matching "/problem" pattern
 def get_a_tags():
@@ -66,8 +66,8 @@ def get_all_links(url,total_pages):
         # I did so because Leetcode wasn't allowing to go to specific webpage by url. It automatically redirects/loads the first page.
         '''
         if i != total_pages: # Because last page will not have next button
-            x_path = "/html/body/div[1]/div/div[2]/div[1]/div[1]/div[5]/div[3]/nav/button[10]"
-            element = driver.find_element("xpath",x_path)
+            X_PATH = "/html/body/div[1]/div/div[2]/div[1]/div[1]/div[5]/div[3]/nav/button[10]"
+            element = driver.find_element("xpath",X_PATH)
             element.click() 
             time.sleep(7)
     # Remove duplicates links using set
@@ -78,7 +78,7 @@ def get_all_links(url,total_pages):
 
 total_pages = 55
 links = []
-links = get_all_links(page_base_url,total_pages)
+links = get_all_links(PAGE_BASE_URL,total_pages)
 
 # Open a file to write the results (links) to
 with open('lc_links_unclean.txt', 'a') as f:

@@ -15,7 +15,7 @@ def remove_links_with_pattern(links, pattern):
     clean_links = []
     for link in links:
         if pattern not in link:
-            clean_links.append(link)
+            clean_links.append("https://leetcode.com"+link)
         else:
             print("Removed: " + link)
     return clean_links
@@ -23,13 +23,13 @@ def remove_links_with_pattern(links, pattern):
 
 pattern = "/solution"
 links = remove_links_with_pattern(unclean_links, pattern)
-print(len(links))
+print("Now total no of clean links: "+ str(len(links)))
 # Remove duplicate links (if any by chance)
 links = list(set(links))
 
 # Open a file to write the results (links) to
 # Used "w" instead of "a" so that each time link_cleaner.py runs it wont add to existing links in the file
-with open('lc_links_clean.txt.txt', 'w') as f: 
+with open('lc_links_clean.txt', 'w') as f: 
     # Iterate over each link in your final list of links
     for link in links:
         # Write each link to the file, followed by a newline
