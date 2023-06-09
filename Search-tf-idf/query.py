@@ -99,7 +99,7 @@ potential_documents = calculate_sorted_order_of_documents(query_terms)
 # Top 15 related documents with links printing
 print("Top 15 documents related to ",query_terms)
 for index,doc_id in enumerate(potential_documents) :
-    print("Document index : ", int(doc_id)+1, "\t :","Score: ", potential_documents[doc_id],"\t", question_links[int(doc_id)+1])
+    print("Document index : ", int(doc_id)+1, "\t :","Score: ", potential_documents[doc_id],"\t", question_links[int(doc_id)])
     if index == 14:
         break
 
