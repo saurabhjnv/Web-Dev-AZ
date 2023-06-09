@@ -1,4 +1,13 @@
 import math
+def load_links():
+    question_links = []
+    with open("Leetcode-Scrapper-Question/Qindex.txt","r") as f:
+        question_links = f.readlines()
+        # use strip to cutoff "\n"
+        question_links = [link.strip() for link in question_links]
+    return question_links
+
+
 def load_documents():
     documents = []
     with open("tf-idf/documents.txt","r") as f:
@@ -35,6 +44,7 @@ query_terms = [term.lower() for term in query_string.strip().split()]
 documents = load_documents()
 vocab_idf_values = load_vocab()
 inverted_index = load_inverted_index()
+question_links = load_links()
 
 def get_tf_dictionary(term):
     tf_values = {}
@@ -86,10 +96,10 @@ print("Numbet of documents: ", len(documents))
 
 potential_documents = calculate_sorted_order_of_documents(query_terms)
 
+# Top 15 related documents with links printing
 print("Top 15 documents related to ",query_terms)
-
 for index,doc_id in enumerate(potential_documents) :
-    print("Document index : ",int(doc_id)+1," :","Score: ",potential_documents[doc_id])
+    print("Document index : ", int(doc_id)+1, "\t :","Score: ", potential_documents[doc_id],"\t", question_links[int(doc_id)+1])
     if index == 14:
         break
 
