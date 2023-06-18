@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Code Search
+{% endblock title %}
+
+{% block css %}
+        <link rel="stylesheet" href="static/css/output.css">  
+{% endblock css %}
+
+{% block content %}
+   <div class="search-result">
+      {% set list_size = 5 %}
+      {% if list_size == 0 %}
+         <p>Sorry , we could not find anything</p>
+      {% else %}
+         {% for index in range(list_size) %}
+            <a class="link-text" href="{{links[index]}}">{{docs_name[index]}}</a>
+            <br>
+         {% endfor %}
+      {% endif %}
+
+   </div>
+   
+    
+
+{% endblock content %}

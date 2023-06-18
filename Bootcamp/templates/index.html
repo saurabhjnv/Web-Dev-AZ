@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+    Code Search
+{% endblock title %}
+
+{% block css %}
+        <link rel="stylesheet" href="static/css/index.css">  
+{% endblock css %}
+
+{% block content %}
+<div class="search-form">
+   <form action="{{ url_for('start_page') }}" method="post">
+     <input placeholder="Enter your Query" required="" type="text" id="query" name="Query" />
+     <button type="submit">SEARCH</button>
+   </form>
+ </div>
+{% endblock content %}
